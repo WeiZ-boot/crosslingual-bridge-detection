@@ -26,7 +26,7 @@
 <line x1="200" y1="308" x2="175" y2="334" stroke="#8a8f98" stroke-width="1.5" marker-end="url(#m)"/>
 <line x1="290" y1="308" x2="350" y2="334" stroke="#8a8f98" stroke-width="1.5" marker-end="url(#m)"/>
 <g class="c-green"><rect x="62" y="336" width="222" height="50" rx="8"/><text class="t" x="173" y="360" text-anchor="middle">Genuine directional bridge</text><text class="ts" x="173" y="377" text-anchor="middle">related ∧ directional ∧ typed</text></g>
-<g class="c-gray"><rect x="298" y="336" width="112" height="50" rx="8"/><text class="t" x="354" y="360" text-anchor="middle">Parallel</text><text class="ts" x="354" y="377" text-anchor="middle">coverage (concurrent)</text></g>
+<g class="c-gray"><rect x="298" y="336" width="112" height="50" rx="8"/><text class="t" x="354" y="360" text-anchor="middle">Parallel</text><text class="ts" x="354" y="377" text-anchor="middle">coverage (&lt;24h)</text></g>
 
 <g class="c-purple"><rect x="452" y="150" width="184" height="172" rx="8"/><text class="t" x="544" y="176" text-anchor="middle">LLM assistant</text><text class="ts" x="544" y="198" text-anchor="middle">selective — hard cases</text><text class="ts" x="544" y="220" text-anchor="middle">· counter-narrative recall</text><text class="ts" x="544" y="242" text-anchor="middle">· B–C fallback + rationale</text><text class="ts" x="544" y="264" text-anchor="middle">· &lt;24h adjudication</text><text class="ts" x="544" y="294" text-anchor="middle">pays off only if</text><text class="ts" x="544" y="310" text-anchor="middle">stronger than teacher</text></g>
 <line x1="452" y1="180" x2="412" y2="140" stroke="#8E5BB5" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#mp)"/>
@@ -34,5 +34,5 @@
 
 <text class="cap" x="240" y="416" text-anchor="middle">solid = pipeline (all data)  ·  dashed purple = selective LLM assistant</text>
 <text class="cap" x="240" y="436" text-anchor="middle">teal = content axis · amber = temporal axis · green = genuine bridge</text>
-<text class="cap" x="240" y="456" text-anchor="middle">70 events · ~98k posts · detection needs both axes; C needs cross-encoding (0.13→0.44)</text>
+<text class="cap" x="240" y="456" text-anchor="middle">70 events · ~98k posts · detection needs both axes</text>
 </svg>

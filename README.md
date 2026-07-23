@@ -8,6 +8,8 @@ post carries the same specific claim across the language boundary, and if so *ho
 **A** = translation / faithful restatement, **B** = reframing, **C** = counter-narrative,
 **no** = no bridge.
 
+![Detection framework: EN/ZH platforms feed event-scoped retrieval, a cross-encoder content classifier, and a deterministic temporal layer, with a selective LLM assistant for hard cases](figures/fig1_framework.svg)
+
 **Resource.** 70 events, ~98k posts, nine platforms (Reddit, X, YouTube, Hacker News, Bluesky;
 Weibo, Bilibili, Zhihu, Douyin), 13,992 candidate pairs fully dual-annotated by two frontier LLMs
 from disjoint families, with all 1,027 same-codebook disagreements adjudicated and a **1,445-pair
@@ -61,6 +63,8 @@ python analysis/make_figures.py
 python fusec_plus/fusecplus_validate_v2.py     # Table II arbiter/self-consistency rows + paired tests
 python fusec_plus/arbiter_standalone_cis.py    # descriptive CIs (verifies frozen-prediction reproduction first)
 ```
+
+![Benchmark results on gold v2.3: only stance-aware models detect counter-narrative; the gap widens on the expert-verified core](figures/fig5_benchmark.png)
 
 `eval/fuse_c_v.py` is the same-budget verifier prototype: it combines one few-shot LLM prediction
 per pair with local FUSE-C predictions and trains an event-disjoint verifier. It expects per-pair
