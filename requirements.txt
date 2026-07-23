@@ -1,0 +1,8 @@
+numpy
+scikit-learn
+matplotlib
+openai>=1.0
+python-dotenv
+torch
+transformers
+sentence-transformers   # BGE-M3 candidate generation

@@ -1,0 +1,212 @@
+{
+  "gold": "gold_consensus.jsonl v2.1 (2798, 143 expert corrections; backup gold_consensus_v2_2798_preexpert.jsonl)",
+  "audit": {
+    "n": 500,
+    "agreement": 0.714,
+    "kappa": 0.612,
+    "per_source": {
+      "agree": 0.848,
+      "adjudicated": 0.58
+    },
+    "per_class": {
+      "no": 0.708,
+      "A": 0.775,
+      "B": 0.621,
+      "C": 0.769
+    },
+    "adjudicated_subset": {
+      "expert_matches_adj": 0.58,
+      "expert_matches_claude": 0.364,
+      "expert_matches_gpt": 0.56,
+      "matches_neither": 0.076
+    }
+  },
+  "v21_full_gold": {
+    "fewshot_nano": {
+      "acc": 0.492,
+      "macroF1": 0.471,
+      "C_F1": 0.424,
+      "C_CI": [
+        0.358,
+        0.498
+      ]
+    },
+    "cross_encoder": {
+      "acc": 0.511,
+      "macroF1": 0.361,
+      "C_F1": 0.251,
+      "C_CI": [
+        0.178,
+        0.326
+      ]
+    }
+  },
+  "expert_audited_500_subset": {
+    "fewshot_nano": {
+      "acc": 0.516,
+      "macroF1": 0.525,
+      "C_F1": 0.548
+    },
+    "cross_encoder": {
+      "acc": 0.358,
+      "macroF1": 0.328,
+      "C_F1": 0.33
+    }
+  },
+  "batch3": {
+    "n": 250,
+    "design": "ALL 175 unaudited adjudicated-C + 75 Bno-cell (biased/targeted)",
+    "confirm_rate": 0.488,
+    "gold_C_confirm": 0.497,
+    "main_direction": {
+      "C->B": 86,
+      "no->B": 23,
+      "no->C": 10
+    },
+    "note": "adjudication over-called C; expert boundary for C is stricter"
+  },
+  "gold_v22": {
+    "file": "gold_consensus.jsonl",
+    "n": 2798,
+    "dist": {
+      "C": 349,
+      "B": 1865,
+      "no": 334,
+      "A": 250
+    },
+    "corrections_applied": 128,
+    "backup": "gold_consensus_v21_preb3.jsonl",
+    "C_expert_touched": "245/349 (ALL adjudicated-C expert-verified; remaining 104 C are consensus-source)"
+  },
+  "v22_full_gold": {
+    "fewshot_nano": {
+      "acc": 0.48,
+      "macroF1": 0.451,
+      "C_F1": 0.357,
+      "C_CI": [
+        0.278,
+        0.44
+      ]
+    },
+    "cross_encoder": {
+      "acc": 0.526,
+      "macroF1": 0.362,
+      "C_F1": 0.25,
+      "C_CI": [
+        0.18,
+        0.319
+      ]
+    }
+  },
+  "expert_touched_750_subset": {
+    "note": "mixes stratified batches 1-2 with targeted batch 3; audited-500 (batches 1-2) is the clean benchmark subset",
+    "fewshot_nano": {
+      "acc": 0.473,
+      "macroF1": 0.482,
+      "C_F1": 0.503
+    },
+    "cross_encoder": {
+      "acc": 0.355,
+      "macroF1": 0.31,
+      "C_F1": 0.281
+    }
+  },
+  "batch4": {
+    "n": 250,
+    "design": "stratified validation of extended-consensus tier (C60/B80/A60/no50, seed 45)",
+    "agreement": 0.776,
+    "per_class": {
+      "no": 0.9,
+      "A": 0.533,
+      "B": 0.85,
+      "C": 0.817
+    },
+    "main_direction": {
+      "A->B": 28,
+      "C->B": 10
+    },
+    "gate_decision": "conditional admit: B/C/no admitted; unaudited extended-A (1,300) excluded from eval"
+  },
+  "batch5": {
+    "n": 445,
+    "design": "exhaustive C cleanup: 341 ext-C + 104 orig-consensus unaudited C",
+    "confirm_rate": 0.906,
+    "directions": {
+      "C->B": 41,
+      "C->no": 1
+    }
+  },
+  "gold_v23": {
+    "n": 2798,
+    "dist": {
+      "C": 342,
+      "B": 1871,
+      "no": 335,
+      "A": 250
+    },
+    "note": "ALL 342 C expert-verified; 7 corrections from batch5 orig-consensus-C",
+    "backup": "gold_consensus_v22_preb5.jsonl"
+  },
+  "gold_v3": {
+    "file": "gold_v3_extended.jsonl",
+    "n": 6451,
+    "events": 70,
+    "dist": {
+      "C": 704,
+      "B": 4718,
+      "no": 746,
+      "A": 283
+    },
+    "note": "two-gold design: v2.3 benchmark (trained systems, event-disjoint), v3 extended (LLM eval/analysis); ALL 704 C expert-verified; unaudited ext-A excluded"
+  },
+  "v23_benchmarks": {
+    "fewshot_nano": {
+      "macroF1": 0.449,
+      "C_F1": 0.348,
+      "C_CI": [
+        0.268,
+        0.43
+      ]
+    },
+    "cross_encoder": {
+      "macroF1": 0.36,
+      "C_F1": 0.247,
+      "C_CI": [
+        0.178,
+        0.316
+      ]
+    }
+  },
+  "v3_benchmark": {
+    "fewshot_nano": {
+      "acc": 0.475,
+      "macroF1": 0.422,
+      "C_F1": 0.334,
+      "C_CI": [
+        0.275,
+        0.388
+      ],
+      "perclass": {
+        "no": 0.487,
+        "A": 0.318,
+        "B": 0.548,
+        "C": 0.334
+      }
+    },
+    "zeroshot_nano": {
+      "acc": 0.428,
+      "macroF1": 0.384,
+      "C_F1": 0.283,
+      "C_CI": [
+        0.222,
+        0.337
+      ],
+      "perclass": {
+        "no": 0.352,
+        "A": 0.397,
+        "B": 0.506,
+        "C": 0.283
+      }
+    }
+  }
+}

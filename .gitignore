@@ -1,0 +1,21 @@
+# data files (Tier 1/2 — distributed separately per docs/DATA_RELEASE.md)
+*.jsonl
+*.npz
+*.csv
+# frozen FUSE-C+ signal files are pair_id-keyed probabilities (no text) — released with the code
+!fusec_plus/llm_probs.jsonl
+!fusec_plus/llm_votes.jsonl
+out/
+corpus/
+# secrets / env
+.env
+*.env
+# runtime
+__pycache__/
+*.pyc
+*.log
+.DS_Store
+# model caches
+*.pt
+*.bin
+*.safetensors

@@ -1,0 +1,38 @@
+<svg width="100%" viewBox="0 0 680 470" role="img" xmlns="http://www.w3.org/2000/svg"><title>Cross-lingual bridge detection framework with selective LLM assistant</title><desc>English and Chinese hot-topic posts feed event-scoped retrieval, a cross-encoder content classifier, and a deterministic temporal layer, producing a genuine directional bridge or parallel coverage. A selective LLM assistant attaches to retrieval and classification for hard cases, but only pays off if it is stronger than the distillation teacher.</desc>
+<style>
+.t{font-family:sans-serif;font-size:14px;font-weight:500}.ts{font-family:sans-serif;font-size:12px;font-weight:400}
+.cap{font-family:sans-serif;font-size:12px;font-weight:400;fill:#5a6069}
+.c-blue rect{fill:#E6F1FB;stroke:#2B6CB0;stroke-width:1.5}.c-blue .t{fill:#0C447C}.c-blue .ts{fill:#1A5694}
+.c-red rect{fill:#FCEAEA;stroke:#C0392B;stroke-width:1.5}.c-red .t{fill:#7B241C}.c-red .ts{fill:#A23227}
+.c-gray rect{fill:#F0F1F2;stroke:#8a8f98;stroke-width:1.5}.c-gray .t{fill:#3a3f47}.c-gray .ts{fill:#5a6069}
+.c-teal rect{fill:#E2F4F1;stroke:#2C9C8A;stroke-width:1.5}.c-teal .t{fill:#0F5B50}.c-teal .ts{fill:#1A7567}
+.c-amber rect{fill:#FCF1DC;stroke:#C8922B;stroke-width:1.5}.c-amber .t{fill:#7A5713}.c-amber .ts{fill:#9A6F1C}
+.c-green rect{fill:#E6F4E6;stroke:#3A9D3A;stroke-width:1.5}.c-green .t{fill:#1E5E1E}.c-green .ts{fill:#2C7A2C}
+.c-purple rect{fill:#F1E9F7;stroke:#8E5BB5;stroke-width:1.5}.c-purple .t{fill:#5A2E7E}.c-purple .ts{fill:#74449C}
+</style>
+<defs><marker id="m" markerWidth="8" markerHeight="8" refX="6.5" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#8a8f98"/></marker><marker id="mp" markerWidth="8" markerHeight="8" refX="6.5" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#8E5BB5"/></marker></defs>
+
+<g class="c-blue"><rect x="48" y="40" width="184" height="50" rx="8"/><text class="t" x="140" y="64" text-anchor="middle">English (5)</text><text class="ts" x="140" y="81" text-anchor="middle">Reddit·HN·X·YouTube·Bluesky</text></g>
+<g class="c-red"><rect x="252" y="40" width="184" height="50" rx="8"/><text class="t" x="344" y="64" text-anchor="middle">Chinese (4)</text><text class="ts" x="344" y="81" text-anchor="middle">Weibo·Bilibili·Zhihu·Douyin</text></g>
+<line x1="140" y1="90" x2="205" y2="112" stroke="#8a8f98" stroke-width="1.5" marker-end="url(#m)"/>
+<line x1="344" y1="90" x2="275" y2="112" stroke="#8a8f98" stroke-width="1.5" marker-end="url(#m)"/>
+
+<g class="c-gray"><rect x="70" y="114" width="340" height="50" rx="8"/><text class="t" x="240" y="138" text-anchor="middle">Stage 1 · event-scoped retrieval</text><text class="ts" x="240" y="155" text-anchor="middle">event + time window · BGE-M3 · no floor</text></g>
+<line x1="240" y1="164" x2="240" y2="184" stroke="#8a8f98" stroke-width="1.5" marker-end="url(#m)"/>
+<g class="c-teal"><rect x="70" y="186" width="340" height="50" rx="8"/><text class="t" x="240" y="210" text-anchor="middle">Stage 2 · content classifier</text><text class="ts" x="240" y="227" text-anchor="middle">cross-encoder → A / B / C</text></g>
+<line x1="240" y1="236" x2="240" y2="256" stroke="#8a8f98" stroke-width="1.5" marker-end="url(#m)"/>
+<g class="c-amber"><rect x="70" y="258" width="340" height="50" rx="8"/><text class="t" x="240" y="282" text-anchor="middle">Stage 3 · temporal layer</text><text class="ts" x="240" y="299" text-anchor="middle">Δt → direction + parallel flag · deterministic</text></g>
+
+<line x1="200" y1="308" x2="175" y2="334" stroke="#8a8f98" stroke-width="1.5" marker-end="url(#m)"/>
+<line x1="290" y1="308" x2="350" y2="334" stroke="#8a8f98" stroke-width="1.5" marker-end="url(#m)"/>
+<g class="c-green"><rect x="62" y="336" width="222" height="50" rx="8"/><text class="t" x="173" y="360" text-anchor="middle">Genuine directional bridge</text><text class="ts" x="173" y="377" text-anchor="middle">related ∧ directional ∧ typed</text></g>
+<g class="c-gray"><rect x="298" y="336" width="112" height="50" rx="8"/><text class="t" x="354" y="360" text-anchor="middle">Parallel</text><text class="ts" x="354" y="377" text-anchor="middle">coverage (concurrent)</text></g>
+
+<g class="c-purple"><rect x="452" y="150" width="184" height="172" rx="8"/><text class="t" x="544" y="176" text-anchor="middle">LLM assistant</text><text class="ts" x="544" y="198" text-anchor="middle">selective — hard cases</text><text class="ts" x="544" y="220" text-anchor="middle">· counter-narrative recall</text><text class="ts" x="544" y="242" text-anchor="middle">· B–C fallback + rationale</text><text class="ts" x="544" y="264" text-anchor="middle">· &lt;24h adjudication</text><text class="ts" x="544" y="294" text-anchor="middle">pays off only if</text><text class="ts" x="544" y="310" text-anchor="middle">stronger than teacher</text></g>
+<line x1="452" y1="180" x2="412" y2="140" stroke="#8E5BB5" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#mp)"/>
+<line x1="452" y1="220" x2="412" y2="210" stroke="#8E5BB5" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#mp)"/>
+
+<text class="cap" x="240" y="416" text-anchor="middle">solid = pipeline (all data)  ·  dashed purple = selective LLM assistant</text>
+<text class="cap" x="240" y="436" text-anchor="middle">teal = content axis · amber = temporal axis · green = genuine bridge</text>
+<text class="cap" x="240" y="456" text-anchor="middle">70 events · ~98k posts · detection needs both axes; C needs cross-encoding (0.13→0.44)</text>
+</svg>

@@ -1,0 +1,352 @@
+{
+ "gaza_oct7_2023": {
+  "c_rate": 0.35,
+  "C": 70,
+  "n": 200
+ },
+ "fukushima_release": {
+  "c_rate": 0.27,
+  "C": 54,
+  "n": 200
+ },
+ "philippines_scs_collision": {
+  "c_rate": 0.265,
+  "C": 53,
+  "n": 200
+ },
+ "greenland_trump_2025": {
+  "c_rate": 0.26,
+  "C": 52,
+  "n": 200
+ },
+ "taiwan_lai_twostate": {
+  "c_rate": 0.255,
+  "C": 51,
+  "n": 200
+ },
+ "pelosi_taiwan": {
+  "c_rate": 0.215,
+  "C": 43,
+  "n": 200
+ },
+ "scs_philippines_2024": {
+  "c_rate": 0.205,
+  "C": 41,
+  "n": 200
+ },
+ "unitree_gala_2025": {
+  "c_rate": 0.2,
+  "C": 40,
+  "n": 200
+ },
+ "venezuela_us_2026": {
+  "c_rate": 0.19,
+  "C": 38,
+  "n": 200
+ },
+ "nvidia_market_cap": {
+  "c_rate": 0.18,
+  "C": 36,
+  "n": 200
+ },
+ "eileen_gu_identity": {
+  "c_rate": 0.18,
+  "C": 36,
+  "n": 200
+ },
+ "pla_rocket_force_purge": {
+  "c_rate": 0.175,
+  "C": 35,
+  "n": 200
+ },
+ "xinjiang_cotton": {
+  "c_rate": 0.17,
+  "C": 34,
+  "n": 200
+ },
+ "nk_troops_russia": {
+  "c_rate": 0.17,
+  "C": 34,
+  "n": 200
+ },
+ "india_pakistan_2025": {
+  "c_rate": 0.17,
+  "C": 34,
+  "n": 200
+ },
+ "houthi_redsea": {
+  "c_rate": 0.17,
+  "C": 34,
+  "n": 200
+ },
+ "china_spy_balloon": {
+  "c_rate": 0.165,
+  "C": 33,
+  "n": 200
+ },
+ "openai_gpt5_2025": {
+  "c_rate": 0.135,
+  "C": 27,
+  "n": 200
+ },
+ "syria_assad_fall": {
+  "c_rate": 0.13,
+  "C": 26,
+  "n": 200
+ },
+ "rednote_migration_2025": {
+  "c_rate": 0.125,
+  "C": 25,
+  "n": 200
+ },
+ "joint_sword_2024b": {
+  "c_rate": 0.125,
+  "C": 25,
+  "n": 200
+ },
+ "tiktok_ban": {
+  "c_rate": 0.12,
+  "C": 24,
+  "n": 200
+ },
+ "us_china_reckoning": {
+  "c_rate": 0.115,
+  "C": 23,
+  "n": 200
+ },
+ "epstein_case": {
+  "c_rate": 0.115,
+  "C": 23,
+  "n": 200
+ },
+ "brics_summit_2023": {
+  "c_rate": 0.115,
+  "C": 23,
+  "n": 200
+ },
+ "zhuhai_airshow_2024": {
+  "c_rate": 0.11,
+  "C": 22,
+  "n": 200
+ },
+ "prigozhin_mutiny": {
+  "c_rate": 0.11,
+  "C": 22,
+  "n": 200
+ },
+ "lebanon_pager_2024": {
+  "c_rate": 0.11,
+  "C": 22,
+  "n": 200
+ },
+ "dji_us_ban": {
+  "c_rate": 0.11,
+  "C": 22,
+  "n": 200
+ },
+ "pan_zhanle_100m": {
+  "c_rate": 0.105,
+  "C": 21,
+  "n": 200
+ },
+ "doge_musk_2025": {
+  "c_rate": 0.105,
+  "C": 21,
+  "n": 200
+ },
+ "us_israel_iran": {
+  "c_rate": 0.1,
+  "C": 20,
+  "n": 200
+ },
+ "pope_leo_2025": {
+  "c_rate": 0.1,
+  "C": 20,
+  "n": 200
+ },
+ "likeqiang_death": {
+  "c_rate": 0.1,
+  "C": 20,
+  "n": 200
+ },
+ "korea_martial_law": {
+  "c_rate": 0.095,
+  "C": 19,
+  "n": 200
+ },
+ "black_myth_wukong": {
+  "c_rate": 0.095,
+  "C": 19,
+  "n": 200
+ },
+ "ukraine_kursk_incursion": {
+  "c_rate": 0.09,
+  "C": 18,
+  "n": 200
+ },
+ "us_election_2024": {
+  "c_rate": 0.085,
+  "C": 17,
+  "n": 200
+ },
+ "trump_zelensky_oval_2025": {
+  "c_rate": 0.085,
+  "C": 17,
+  "n": 200
+ },
+ "taiwan_election_2024": {
+  "c_rate": 0.085,
+  "C": 17,
+  "n": 200
+ },
+ "charlie_kirk_2025": {
+  "c_rate": 0.085,
+  "C": 17,
+  "n": 200
+ },
+ "white_paper_protests": {
+  "c_rate": 0.08,
+  "C": 16,
+  "n": 200
+ },
+ "trump_tariff_2025": {
+  "c_rate": 0.075,
+  "C": 15,
+  "n": 200
+ },
+ "spacex_launch_opinion": {
+  "c_rate": 0.075,
+  "C": 15,
+  "n": 200
+ },
+ "nezha2_movie": {
+  "c_rate": 0.075,
+  "C": 15,
+  "n": 200
+ },
+ "us_svb_collapse": {
+  "c_rate": 0.07,
+  "C": 14,
+  "n": 200
+ },
+ "nvidia_h20_china": {
+  "c_rate": 0.07,
+  "C": 14,
+  "n": 200
+ },
+ "india_chandrayaan3": {
+  "c_rate": 0.07,
+  "C": 14,
+  "n": 200
+ },
+ "huawei_mate60_launch": {
+  "c_rate": 0.07,
+  "C": 14,
+  "n": 200
+ },
+ "openai_o1": {
+  "c_rate": 0.065,
+  "C": 13,
+  "n": 200
+ },
+ "la_ice_protests_2025": {
+  "c_rate": 0.065,
+  "C": 13,
+  "n": 200
+ },
+ "fujian_carrier_trial": {
+  "c_rate": 0.06,
+  "C": 12,
+  "n": 200
+ },
+ "sixthgen_fighter_2024": {
+  "c_rate": 0.055,
+  "C": 11,
+  "n": 200
+ },
+ "shanghai_lockdown_2022": {
+  "c_rate": 0.045,
+  "C": 9,
+  "n": 200
+ },
+ "saudi_iran_china_mediation": {
+  "c_rate": 0.045,
+  "C": 9,
+  "n": 200
+ },
+ "evergrande_liquidation": {
+  "c_rate": 0.045,
+  "C": 9,
+  "n": 200
+ },
+ "signalgate_2025": {
+  "c_rate": 0.04,
+  "C": 8,
+  "n": 200
+ },
+ "eu_china_ev_tariffs": {
+  "c_rate": 0.035,
+  "C": 7,
+  "n": 200
+ },
+ "deepseek_viral": {
+  "c_rate": 0.035,
+  "C": 7,
+  "n": 200
+ },
+ "sam_altman_ousting": {
+  "c_rate": 0.03,
+  "C": 6,
+  "n": 200
+ },
+ "trump_shooting": {
+  "c_rate": 0.025,
+  "C": 5,
+  "n": 200
+ },
+ "paris_olympics_ceremony": {
+  "c_rate": 0.025,
+  "C": 5,
+  "n": 200
+ },
+ "la_wildfires_2025": {
+  "c_rate": 0.025,
+  "C": 5,
+  "n": 200
+ },
+ "us_china_sanctions": {
+  "c_rate": 0.015,
+  "C": 3,
+  "n": 200
+ },
+ "titan_submersible": {
+  "c_rate": 0.015,
+  "C": 3,
+  "n": 200
+ },
+ "sora_debut": {
+  "c_rate": 0.015,
+  "C": 3,
+  "n": 200
+ },
+ "luigi_mangione_2024": {
+  "c_rate": 0.015,
+  "C": 3,
+  "n": 200
+ },
+ "gaza_ceasefire_2025": {
+  "c_rate": 0.015,
+  "C": 3,
+  "n": 200
+ },
+ "us_govt_shutdown_2025": {
+  "c_rate": 0.01,
+  "C": 2,
+  "n": 200
+ },
+ "taiwan_strait_drill_2025": {
+  "c_rate": 0.0052,
+  "C": 1,
+  "n": 192
+ }
+}

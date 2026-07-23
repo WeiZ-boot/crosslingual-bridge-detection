@@ -1,0 +1,87 @@
+{
+  "full_gold_n": 2798,
+  "systems": [
+    {
+      "key": "majority",
+      "label": "majority",
+      "macro": 0.2,
+      "C": 0.0
+    },
+    {
+      "key": "sim-LR",
+      "label": "similarity\nLR",
+      "macro": 0.213,
+      "C": 0.0
+    },
+    {
+      "key": "nli-zs",
+      "label": "NLI\nzero-shot",
+      "macro": 0.241,
+      "C": 0.155
+    },
+    {
+      "key": "bi-enc",
+      "label": "bi-enc.\nMLP",
+      "macro": 0.298,
+      "C": 0.141
+    },
+    {
+      "key": "cross-enc",
+      "label": "cross-enc.\nXLM-R",
+      "macro": 0.36,
+      "C": 0.247,
+      "C_CI": [
+        0.178,
+        0.316
+      ]
+    },
+    {
+      "key": "zs-llm",
+      "label": "zero-shot\nLLM",
+      "macro": 0.432,
+      "C": 0.299
+    },
+    {
+      "key": "fs-llm",
+      "label": "few-shot\nLLM",
+      "macro": 0.449,
+      "C": 0.348,
+      "C_CI": [
+        0.268,
+        0.43
+      ]
+    }
+  ],
+  "expert_core_n": 500,
+  "expert_core": [
+    {
+      "key": "cross-enc",
+      "label": "cross-enc.\nXLM-R",
+      "macro": 0.328,
+      "C": 0.33,
+      "ref": false
+    },
+    {
+      "key": "fs-llm",
+      "label": "few-shot\nLLM",
+      "macro": 0.525,
+      "C": 0.548,
+      "ref": false
+    },
+    {
+      "key": "claude",
+      "label": "Claude\nannot. ref.",
+      "macro": 0.621,
+      "C": 0.61,
+      "ref": true
+    },
+    {
+      "key": "gpt55",
+      "label": "GPT-5.5\nannot. ref.",
+      "macro": 0.701,
+      "C": 0.829,
+      "ref": true
+    }
+  ],
+  "gold_version": "v2.3"
+}
