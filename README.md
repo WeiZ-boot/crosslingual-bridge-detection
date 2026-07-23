@@ -1,5 +1,8 @@
 # FUSE-C / FUSE-C+: Cross-Lingual Bridge Detection
 
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-blue.svg)
+
 Code, codebook, and frozen result artifacts for the paper *"FUSE-C: Multi-View Fusion and
 Selective Cascading for Cross-Lingual Bridge Detection."*
 
@@ -7,6 +10,8 @@ Selective Cascading for Cross-Lingual Bridge Detection."*
 post carries the same specific claim across the language boundary, and if so *how*:
 **A** = translation / faithful restatement, **B** = reframing, **C** = counter-narrative,
 **no** = no bridge.
+
+![Task card: an English post and a Chinese post about the same event; the task is to pick the relation the Chinese post bears to the English claim, here counter-narrative](figures/fig0_task_card.svg)
 
 ![Detection framework: EN/ZH platforms feed event-scoped retrieval, a cross-encoder content classifier, and a deterministic temporal layer, with a selective LLM assistant for hard cases](figures/fig1_framework.svg)
 
@@ -77,6 +82,21 @@ few-shot LLM C-F1 **0.35** [.27,.43] on benchmark gold / **0.33** [.28,.39] on e
 **0.55** on the expert-verified core; cross-encoder 0.25 / — / 0.33; all stance-blind baselines ≤0.17.
 FUSE-C+ arbiter (pre-registered): C-F1 **0.391** on benchmark gold (vs LLM 0.348, p=0.055 --- reported
 as edge-of-significance, not a win) / **0.609** on the expert core (macro gain significant, p=0.025).
+
+## Key results at a glance
+
+<img src="figures/fig8_cascade_sweep.png" width="440" alt="Cascade budget sweep: confidence-margin routing dominates random routing over the full sweep and reaches 95% of the pure-LLM macro-F1 at r=0.38">
+
+Confidence-margin routing dominates random routing over the whole budget sweep, and the cascade
+reaches 95% of the pure-LLM macro-F1 at 38% of its call budget. Regenerate with
+`python analysis/gen_cascade_sweep.py`; every plotted number is asserted against
+`results/pareto_fine_v23.json` before drawing.
+
+<img src="figures/fig6_anatomy.png" width="640" alt="Bridge anatomy: the concurrent share falls and the EN-ZH lag rises from translation to reframing to counter-narrative">
+
+Fidelity crosses the language boundary fast, transformation is slow: the median |EN–ZH| lag rises
+from 62 hours (translation) to 15 days (reframing) and 51 days (counter-narrative), and the
+concurrent share falls from 38% to 9% (silver labels, descriptive; `results/bridge_science_result.json`).
 
 ## License & citation
 
