@@ -45,7 +45,7 @@ pip install -r requirements.txt          # torch env needed for cross-encoder / 
 python eval/gold_baselines.py            # majority / sim-LR / bi-encoder / zero-shot LLM
 python eval/nli_baseline.py              # NLI zero-shot + NLI-LR
 python eval/phase4b_bench.py             # cross-encoder (XLM-R on GPT-5.5 silver)
-python eval/fewshot_eval.py --model gpt-5.1-sol
+python eval/fewshot_eval.py --model gpt-6-sol
 python eval/fuse_c_v.py --root eval --out results
 # extended gold v3 (n=6,451, LLM systems only — see paper §6 for why)
 python eval/fewshot_v3_run.py            # checkpointed / resumable
