@@ -57,11 +57,9 @@ integrity. Silver-set (13,992) ZH text is IDs+hash only.
   future rehydrated evaluations toward A/B pairs.
 
 **Tier 3 — re-collection tooling.**
-- Collection configurations (event windows and query terms per event — `collection/events_clean.yaml`
-  plus in-script event lists — and Arctic Shift queries) sufficient to re-collect from scratch.
-  ZH-side Zhihu/Douyin crawls used the open-source MediaCrawler tool with the same per-event
-  keywords. This documents provenance and makes the pipeline auditable even if both content
-  tiers become unavailable.
+- Collection configurations (event windows, query terms per event, MediaCrawler configs, Arctic
+  Shift queries) sufficient to re-collect from scratch. This documents provenance and makes the
+  pipeline auditable even if both content tiers become unavailable.
 
 ## What is never released
 - Usernames/handles, user IDs on ZH platforms, profile metadata, follower data (were stripped at

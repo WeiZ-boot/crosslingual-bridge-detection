@@ -87,51 +87,6 @@ def classify(client, model, r):
         return r["pair_id"], "ERR:" + str(e)[:60]
 
 
-# ------------------------------------------------------------------------------
-# FUSE-C+ Signal 1: per-class LLM probabilities.
-# A cheap SECOND call that decodes exactly one class token with logprobs, then
-# softmaxes over the four class tokens to recover a normalized 4-class distribution.
-# Replaces the near-useless self-reported 1-3 confidence with a real signal.
-# ------------------------------------------------------------------------------
-import math
-
-SYSTEM_CLASSONLY = SYSTEM + (
-    "\n\nIMPORTANT: For THIS turn, output EXACTLY ONE token - one of: no A B C - "
-    "and nothing else. 'no' = not a bridge; A/B/C = the bridge_type as defined above."
-)
-
-CLASSONLY_REMINDER = ("Now answer for the pair above. Output exactly one token - no, A, B, or C - "
-                      "with no JSON, no punctuation, nothing else.")
-
-def classify_with_probs(client, model, r):
-    """Returns (pair_id, label, llm_p) where llm_p is a dict over {no,A,B,C} summing to 1.
-    Falls back to a soft one-hot on the hard label if logprobs are unavailable.
-    gpt-5.4 API constraints: max_completion_tokens (not max_tokens), top_logprobs<=5,
-    reasoning_effort='none' so the class token is the first sampled token; the trailing
-    reminder overrides the few-shot JSON output format."""
-    try:
-        resp = client.chat.completions.create(
-            model=model,
-            messages=[{"role": "system", "content": SYSTEM_CLASSONLY},
-                      {"role": "user", "content": USER.format(**r) + "\n\n" + CLASSONLY_REMINDER}],
-            max_completion_tokens=4, temperature=0.0, reasoning_effort="none",
-            logprobs=True, top_logprobs=5)
-        choice = resp.choices[0]
-        tok = (choice.message.content or "").strip()
-        lab = tok if tok in CLASSES else "no"
-        try:
-            tl = choice.logprobs.content[0].top_logprobs
-            lp = {t.token.strip(): t.logprob for t in tl}
-            raw = {c: lp.get(c, -20.0) for c in CLASSES}
-            z = math.log(sum(math.exp(v) for v in raw.values()))
-            llm_p = {c: math.exp(raw[c] - z) for c in CLASSES}
-        except Exception:
-            llm_p = {c: (0.85 if c == lab else 0.05) for c in CLASSES}
-        return r["pair_id"], lab, llm_p
-    except Exception as e:
-        return r["pair_id"], "ERR:" + str(e)[:60], {c: 0.25 for c in CLASSES}
-
-
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--model", default="gpt-5.4-nano")
